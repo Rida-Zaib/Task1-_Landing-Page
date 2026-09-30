@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Echoform — Turn Sound Into Something You Can See</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page-shell">
+<div class="page-field" aria-hidden="true">
+  <div class="pf pf-1"></div>
+  <div class="pf pf-2"></div>
+  <div class="pf pf-3"></div>
+  <div class="pf pf-4"></div>
+  <div class="pf pf-5"></div>
+  <div class="pf pf-6"></div>
+</div>
+
+<header>
+  <nav class="wrap">
+    <a href="#top" class="brand">
+      <span class="brand-dot"></span>
+      <span class="brand-mark">Echoform</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#features">Product</a></li>
+      <li><a href="#audience">Made for</a></li>
+      <li><a href="#steps">How it works</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+    </ul>
+    <a href="#cta" class="nav-cta">Get the beta</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="blob-field" aria-hidden="true">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+    <canvas class="field-canvas" id="fieldCanvas" aria-hidden="true"></canvas>
+    <div class="wrap hero-inner">
+      <span class="eyebrow"><span class="pulse"></span> Now reacting to live audio input</span>
+      <h1>
+        <span class="line"><span style="animation-delay:.05s">Turn sound into</span></span>
+        <span class="line"><span style="animation-delay:.18s">something you can see.</span></span>
+      </h1>
+      <p class="lede">Echoform listens to whatever's playing — a mixer, a mic, a MIDI controller — and generates visuals that move with it in real time. No timeline, no keyframes, just the performance.</p>
+      <div class="hero-actions">
+        <a href="#cta" class="btn btn-primary">Watch it react</a>
+        <a href="#steps" class="btn btn-ghost">How it works</a>
+      </div>
+      <div class="waveform" aria-hidden="true">
+        <i style="height:22px; animation-delay:0s;"></i>
+        <i style="height:48px; animation-delay:.1s;"></i>
+        <i style="height:34px; animation-delay:.2s;"></i>
+        <i style="height:58px; animation-delay:.3s;"></i>
+        <i style="height:26px; animation-delay:.4s;"></i>
+        <i style="height:44px; animation-delay:.5s;"></i>
+        <i style="height:20px; animation-delay:.6s;"></i>
+        <i style="height:52px; animation-delay:.7s;"></i>
+        <i style="height:30px; animation-delay:.8s;"></i>
+      </div>
+    </div>
+  </section>
+
+  <section id="audience">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Built for people performing live</h2>
+        <p>If your work happens in front of an audience in real time, Echoform is built to keep up with it.</p>
+      </div>
+      <div class="audience-grid">
+        <div class="audience-card reveal">
+          <div class="glyph" style="background:linear-gradient(135deg,var(--cyan),var(--violet));"></div>
+          <h3>Touring musicians</h3>
+          <p>Feed it a stage mix and get visuals that follow the set, night after night, without a cue sheet.</p>
+        </div>
+        <div class="audience-card reveal">
+          <div class="glyph" style="background:linear-gradient(135deg,var(--magenta),var(--amber));"></div>
+          <h3>VJs &amp; visual artists</h3>
+          <p>Layer generative visuals over your own footage and blend between presets mid-performance.</p>
+        </div>
+        <div class="audience-card reveal">
+          <div class="glyph" style="background:linear-gradient(135deg,var(--violet),var(--magenta));"></div>
+          <h3>Streamers</h3>
+          <p>Add a reactive backdrop to a stream without hand-animating a single frame of it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>What's actually running under the hood</h2>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card reveal">
+          <span class="tag mono">REAL-TIME</span>
+          <h3>Audio-reactive engine</h3>
+          <p>Analyzes frequency and transients as they happen — nothing is pre-rendered.</p>
+        </div>
+        <div class="feature-card reveal">
+          <span class="tag mono">CONTROL</span>
+          <h3>MIDI &amp; OSC mapping</h3>
+          <p>Map any control surface to a visual parameter in a few clicks.</p>
+        </div>
+        <div class="feature-card reveal">
+          <span class="tag mono">LIBRARY</span>
+          <h3>40+ presets</h3>
+          <p>Start from a preset and push it somewhere new — every preset exposes its parameters.</p>
+        </div>
+        <div class="feature-card reveal">
+          <span class="tag mono">OUTPUT</span>
+          <h3>Stream-ready output</h3>
+          <p>Sends straight to OBS, a projector, or a second display with no capture card needed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="steps">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>From plugged in to performing</h2>
+      </div>
+      <div class="steps-row">
+        <div class="step reveal">
+          <span class="num">01</span>
+          <h3>Connect a source</h3>
+          <p>Line in, mic, MIDI controller, or your DAW's output — Echoform listens to whatever you route to it.</p>
+        </div>
+        <div class="step reveal">
+          <span class="num">02</span>
+          <h3>Pick a starting preset</h3>
+          <p>Choose from the library or start blank, then shape the parameters to fit the set.</p>
+        </div>
+        <div class="step reveal">
+          <span class="num">03</span>
+          <h3>Perform</h3>
+          <p>The visuals move with the input live — no rendering, no waiting, no timeline to babysit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>What people are running it with</h2>
+      </div>
+      <div class="quote-strip">
+        <div class="quote-card reveal">
+          <p class="q">I replaced two laptops and a VJ rig with this on my last tour.</p>
+          <p class="who">— touring lighting designer</p>
+        </div>
+        <div class="quote-card reveal">
+          <p class="q">The MIDI mapping is the first one I've used that doesn't fight me mid-set.</p>
+          <p class="who">— live visual artist</p>
+        </div>
+        <div class="quote-card reveal">
+          <p class="q">My stream finally has a backdrop that isn't just a static loop.</p>
+          <p class="who">— streamer, 40k followers</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cta">
+    <div class="wrap">
+      <div class="cta-band reveal">
+        <h2>Plug something in and watch it move.</h2>
+        <p>The beta is free while we're still tuning the engine.</p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary">Download the beta</a>
+          <a href="#" class="btn btn-ghost">Book a live demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <span class="brand-mark" style="font-size:1.2rem;">Echoform</span>
+        <p>Real-time generative visuals for anyone performing in front of a live audience.</p>
+      </div>
+      <div>
+        <h4>PRODUCT</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#steps">How it works</a></li>
+          <li><a href="#">Changelog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>SUPPORT</h4>
+        <ul>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Community Discord</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>FOLLOW</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">hello@echoform.example</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Echoform</span>
+      <span>Built for the stage, not the timeline</span>
+    </div>
+  </div>
+</footer>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
